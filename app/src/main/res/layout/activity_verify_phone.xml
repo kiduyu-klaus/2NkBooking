@@ -75,7 +75,7 @@
                     app:error_color="#77ce9d"
                     android:id="@+id/editTextCode"
                     app:input_type="numeric"
-                    app:length_of_code="4"
+                    app:length_of_code="6"
                     />
             </LinearLayout>
 

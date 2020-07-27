@@ -60,7 +60,7 @@
                 android:id="@+id/editTextPhone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="0770******"
+                android:hint="07********"
                 android:inputType="phone"
                 android:maxLines="1"
                 android:singleLine="true"

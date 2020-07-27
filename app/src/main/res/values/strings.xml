@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">2Nk Booking</string>
+    <string name="app_name_splash">2Nk Booking</string>
     <string name="title_activity_maps">Map</string>
 </resources>
