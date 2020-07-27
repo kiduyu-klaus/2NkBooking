@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "537390361804",
+    "firebase_url": "https://nk-booking.firebaseio.com",
+    "project_id": "nk-booking",
+    "storage_bucket": "nk-booking.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:537390361804:android:a77a1db0e5f8c4cfa32669",
+        "android_client_info": {
+          "package_name": "com.kiduyu.meshproject.a2nkbooking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "537390361804-g0740gq8lhpt7g0abuvkcmdiamcctd31.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kiduyu.meshproject.a2nkbooking",
+            "certificate_hash": "3ba39af2962b98b1aa6b294bdf81bd32eea77ba7"
+          }
+        },
+        {
+          "client_id": "537390361804-j6cslh7p16qo3bs046jqpqboua7v9fqo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAx9CTR323vfgCJb5CSMizrD4b5cWZg1o4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "537390361804-j6cslh7p16qo3bs046jqpqboua7v9fqo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
