@@ -44,8 +44,8 @@ public class HomeActivity extends AppCompatActivity {
 
                         break;
                     case R.id.nav_wallet:
-                        //   getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        //         new My_Animals_Fragment()).commit();
+                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                              new MyBookingsFragment()).commit();
 
                         break;
                     case R.id.nav_home:
