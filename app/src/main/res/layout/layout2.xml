@@ -183,7 +183,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/calibri"
-                                android:text="KDE 334A"
+                                android:text="KBC 234H"
                                 android:textColor="#8a8a8a" />
 
                         </LinearLayout>
