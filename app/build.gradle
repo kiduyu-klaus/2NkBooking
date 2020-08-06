@@ -54,4 +54,26 @@ dependencies {
     implementation 'com.firebaseui:firebase-ui-firestore:6.0.2'
     implementation 'com.firebaseui:firebase-ui-auth:6.0.2'
     implementation 'com.firebaseui:firebase-ui-storage:6.0.2'
+
+    //alertdialog
+    implementation 'com.github.Shashank02051997:FancyAlertDialog-Android:0.1'
+
+    //fancytoast
+    implementation 'com.github.Shashank02051997:FancyToast-Android:0.1.6'
+
+
+    //remember me
+    implementation 'io.paperdb:paperdb:2.6'
+
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+
+    //navigation
+    implementation 'androidx.navigation:navigation-fragment:2.0.0'
+    implementation 'androidx.navigation:navigation-ui:2.0.0'
+
+    //circle imageview
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
 }

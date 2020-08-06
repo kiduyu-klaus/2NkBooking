@@ -118,7 +118,7 @@ public class PasswordActivity extends AppCompatActivity {
                         Toast.makeText(PasswordActivity.this, "Welcome , you are logged in Successfully...", Toast.LENGTH_SHORT).show();
 
 
-                        Intent intent = new Intent(PasswordActivity.this, MainActivity.class);
+                        Intent intent = new Intent(PasswordActivity.this, HomeActivity.class);
                         startActivity(intent);
                     }else {
                         loadingBar.dismiss();

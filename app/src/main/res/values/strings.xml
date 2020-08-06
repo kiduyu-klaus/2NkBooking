@@ -2,4 +2,8 @@
     <string name="app_name">2Nk Booking</string>
     <string name="app_name_splash">2Nk Booking</string>
     <string name="title_activity_maps">Map</string>
+
+    //home
+    <string name="navigation_drawer_open">Open navigtion drawer</string>
+    <string name="navigation_drawer_close">close navigtion drawer</string>
 </resources>
