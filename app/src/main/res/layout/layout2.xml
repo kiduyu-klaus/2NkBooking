@@ -77,7 +77,7 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="16dp"
                         android:fontFamily="@font/print_clearly"
-                        android:text="Select your bus!"
+                        android:text="Select your preffered bus!"
                         android:textAlignment="center"
                         android:textColor="#FFFFFF"
                         android:textSize="18sp" />
@@ -95,7 +95,7 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:fontFamily="@font/gotham"
-                            android:text="Pune"
+                            android:text="Nyeri"
                             android:textAlignment="center"
                             android:textColor="#FFFFFF"
                             android:textSize="18sp"
@@ -112,7 +112,7 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:fontFamily="@font/gotham"
-                            android:text="Mumbai"
+                            android:text="Mombasa"
                             android:textAlignment="center"
                             android:textColor="#FFFFFF"
                             android:textSize="18sp"
@@ -128,7 +128,7 @@
                         android:layout_below="@+id/linearLayout"
                         android:layout_marginTop="8dp"
                         android:fontFamily="@font/print_clearly"
-                        android:text="12th - Feb - 2019 | Tuesday"
+                        android:text="12thJuly - 19thjuly - 2020 | Tuesday"
                         android:textAlignment="center"
                         android:textColor="#FFFFFF"
                         android:textSize="18sp" />
@@ -136,16 +136,17 @@
                 </RelativeLayout>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView"
+                    android:id="@+id/cardView1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView3"
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
-                    android:layout_marginTop="-44dp"
-                    app:cardCornerRadius="4dp"
-                    app:cardUseCompatPadding="true"
+                    android:layout_marginTop="24dp"
                     android:clickable="true"
                     android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="4dp"
+                    app:cardUseCompatPadding="true"
                     app:contentPadding="16dp">
 
                     <LinearLayout
@@ -164,27 +165,26 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/calibri"
-                                android:text="9:00AM - 12:30PM"
-                                android:textStyle="bold"
+                                android:text="14th july --> 4:00 - 6:00AM"
                                 android:textColor="#000000"
-                                />
+                                android:textStyle="bold" />
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/calibri"
-                                android:text="Expo bus service"
-                                android:textStyle="bold"
-                                android:layout_marginTop="4dp"
                                 android:layout_marginBottom="4dp"
+                                android:layout_marginTop="4dp"
+                                android:fontFamily="@font/calibri"
+                                android:text="2NK bus sacco"
                                 android:textColor="#4b4b4b"
-                                />
+                                android:textStyle="bold" />
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/calibri"
-                                android:text="A/C Sleeper (2+2)"
-                                android:textColor="#8a8a8a"
-                                />
+                                android:text="KDE 334A"
+                                android:textColor="#8a8a8a" />
 
                         </LinearLayout>
 
@@ -194,40 +194,43 @@
                             android:layout_weight="40"
                             android:gravity="center"
                             android:orientation="vertical">
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/calibri"
-                                android:text="$600.00"
+                                android:text="Ksh. 1200"
                                 android:textAlignment="textEnd"
-                                android:textSize="24sp"
-                                android:textStyle="bold"
                                 android:textColor="#f5a622"
-                                />
+                                android:textSize="24sp"
+                                android:textStyle="bold" />
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/calibri"
-                                android:text="3.30 Hour"
-                                android:textAlignment="textEnd"
-                                android:layout_marginTop="4dp"
                                 android:layout_marginBottom="4dp"
-                                android:textColor="#b3b3b3"
-                                />
+                                android:layout_marginTop="4dp"
+                                android:fontFamily="@font/calibri"
+                                android:text="15 Hours"
+                                android:textAlignment="textEnd"
+                                android:textColor="#b3b3b3" />
                         </LinearLayout>
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView3"
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
-                    app:cardCornerRadius="4dp"
-                    app:cardUseCompatPadding="true"
+                    android:layout_marginTop="24dp"
                     android:clickable="true"
                     android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="4dp"
+                    app:cardUseCompatPadding="true"
                     app:contentPadding="16dp">
 
                     <LinearLayout
@@ -246,27 +249,26 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/calibri"
-                                android:text="10:00AM - 2:00PM"
-                                android:textStyle="bold"
+                                android:text="15th july --> 4:00 - 6:00AM"
                                 android:textColor="#000000"
-                                />
+                                android:textStyle="bold" />
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/calibri"
-                                android:text="Red Bus service"
-                                android:textStyle="bold"
-                                android:layout_marginTop="4dp"
                                 android:layout_marginBottom="4dp"
+                                android:layout_marginTop="4dp"
+                                android:fontFamily="@font/calibri"
+                                android:text="2NK bus sacco"
                                 android:textColor="#4b4b4b"
-                                />
+                                android:textStyle="bold" />
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/calibri"
-                                android:text="A/C Sleeper (2+2)"
-                                android:textColor="#8a8a8a"
-                                />
+                                android:text="KCA 198D"
+                                android:textColor="#8a8a8a" />
 
                         </LinearLayout>
 
@@ -276,40 +278,43 @@
                             android:layout_weight="40"
                             android:gravity="center"
                             android:orientation="vertical">
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/calibri"
-                                android:text="$560.00"
+                                android:text="Ksh. 1200"
                                 android:textAlignment="textEnd"
-                                android:textSize="24sp"
-                                android:textStyle="bold"
                                 android:textColor="#f5a622"
-                                />
+                                android:textSize="24sp"
+                                android:textStyle="bold" />
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/calibri"
-                                android:text="4 Hour"
-                                android:textAlignment="textEnd"
-                                android:layout_marginTop="4dp"
                                 android:layout_marginBottom="4dp"
-                                android:textColor="#b3b3b3"
-                                />
+                                android:layout_marginTop="4dp"
+                                android:fontFamily="@font/calibri"
+                                android:text="15 Hours"
+                                android:textAlignment="textEnd"
+                                android:textColor="#b3b3b3" />
                         </LinearLayout>
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView3"
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
-                    app:cardCornerRadius="4dp"
-                    app:cardUseCompatPadding="true"
+                    android:layout_marginTop="24dp"
                     android:clickable="true"
                     android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="4dp"
+                    app:cardUseCompatPadding="true"
                     app:contentPadding="16dp">
 
                     <LinearLayout
@@ -328,27 +333,26 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/calibri"
-                                android:text="12:15PM - 3:30PM"
-                                android:textStyle="bold"
+                                android:text="16th july --> 4:00 - 6:00AM"
                                 android:textColor="#000000"
-                                />
+                                android:textStyle="bold" />
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/calibri"
-                                android:text="Start service"
-                                android:textStyle="bold"
-                                android:layout_marginTop="4dp"
                                 android:layout_marginBottom="4dp"
+                                android:layout_marginTop="4dp"
+                                android:fontFamily="@font/calibri"
+                                android:text="2NK bus sacco"
                                 android:textColor="#4b4b4b"
-                                />
+                                android:textStyle="bold" />
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/calibri"
-                                android:text="A/C Sleeper (2+2)"
-                                android:textColor="#8a8a8a"
-                                />
+                                android:text="KBX 652Q"
+                                android:textColor="#8a8a8a" />
 
                         </LinearLayout>
 
@@ -358,40 +362,43 @@
                             android:layout_weight="40"
                             android:gravity="center"
                             android:orientation="vertical">
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/calibri"
-                                android:text="$450.00"
+                                android:text="Ksh. 1200"
                                 android:textAlignment="textEnd"
-                                android:textSize="24sp"
-                                android:textStyle="bold"
                                 android:textColor="#f5a622"
-                                />
+                                android:textSize="24sp"
+                                android:textStyle="bold" />
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/calibri"
-                                android:text="3.15 Hour"
-                                android:textAlignment="textEnd"
-                                android:layout_marginTop="4dp"
                                 android:layout_marginBottom="4dp"
-                                android:textColor="#b3b3b3"
-                                />
+                                android:layout_marginTop="4dp"
+                                android:fontFamily="@font/calibri"
+                                android:text="15 Hours"
+                                android:textAlignment="textEnd"
+                                android:textColor="#b3b3b3" />
                         </LinearLayout>
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView3"
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
-                    app:cardCornerRadius="4dp"
-                    app:cardUseCompatPadding="true"
+                    android:layout_marginTop="24dp"
                     android:clickable="true"
                     android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="4dp"
+                    app:cardUseCompatPadding="true"
                     app:contentPadding="16dp">
 
                     <LinearLayout
@@ -410,27 +417,26 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/calibri"
-                                android:text="3:00PM - 5:45PM"
-                                android:textStyle="bold"
+                                android:text="17th july --> 4:00 - 6:00AM"
                                 android:textColor="#000000"
-                                />
+                                android:textStyle="bold" />
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/calibri"
-                                android:text="Travelo service"
-                                android:textStyle="bold"
-                                android:layout_marginTop="4dp"
                                 android:layout_marginBottom="4dp"
+                                android:layout_marginTop="4dp"
+                                android:fontFamily="@font/calibri"
+                                android:text="2NK bus sacco"
                                 android:textColor="#4b4b4b"
-                                />
+                                android:textStyle="bold" />
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/calibri"
-                                android:text="A/C Sleeper (2+2)"
-                                android:textColor="#8a8a8a"
-                                />
+                                android:text="KAX 009S"
+                                android:textColor="#8a8a8a" />
 
                         </LinearLayout>
 
@@ -440,40 +446,43 @@
                             android:layout_weight="40"
                             android:gravity="center"
                             android:orientation="vertical">
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/calibri"
-                                android:text="$375.00"
+                                android:text="Ksh. 1200"
                                 android:textAlignment="textEnd"
-                                android:textSize="24sp"
-                                android:textStyle="bold"
                                 android:textColor="#f5a622"
-                                />
+                                android:textSize="24sp"
+                                android:textStyle="bold" />
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/calibri"
-                                android:text="2.45 Hour"
-                                android:textAlignment="textEnd"
-                                android:layout_marginTop="4dp"
                                 android:layout_marginBottom="4dp"
-                                android:textColor="#b3b3b3"
-                                />
+                                android:layout_marginTop="4dp"
+                                android:fontFamily="@font/calibri"
+                                android:text="15 Hours"
+                                android:textAlignment="textEnd"
+                                android:textColor="#b3b3b3" />
                         </LinearLayout>
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView3"
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
-                    app:cardCornerRadius="4dp"
-                    app:cardUseCompatPadding="true"
+                    android:layout_marginTop="24dp"
                     android:clickable="true"
                     android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="4dp"
+                    app:cardUseCompatPadding="true"
                     app:contentPadding="16dp">
 
                     <LinearLayout
@@ -492,27 +501,26 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/calibri"
-                                android:text="7:00PM - 10:00PM"
-                                android:textStyle="bold"
+                                android:text="18th july --> 4:00 - 6:00AM"
                                 android:textColor="#000000"
-                                />
+                                android:textStyle="bold" />
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/calibri"
-                                android:text="Shuttle bus service"
-                                android:textStyle="bold"
-                                android:layout_marginTop="4dp"
                                 android:layout_marginBottom="4dp"
+                                android:layout_marginTop="4dp"
+                                android:fontFamily="@font/calibri"
+                                android:text="2NK bus sacco"
                                 android:textColor="#4b4b4b"
-                                />
+                                android:textStyle="bold" />
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/calibri"
-                                android:text="A/C Sleeper (2+2)"
-                                android:textColor="#8a8a8a"
-                                />
+                                android:text="KCK 112H"
+                                android:textColor="#8a8a8a" />
 
                         </LinearLayout>
 
@@ -522,28 +530,27 @@
                             android:layout_weight="40"
                             android:gravity="center"
                             android:orientation="vertical">
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/calibri"
-                                android:text="$700.00"
-                                android:textAlignment="textEnd"
-                                android:textSize="24sp"
-                                android:textStyle="bold"
-                                android:textColor="#f5a622"
-                                />
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/calibri"
-                                android:text="3.00 Hour"
-                                android:textAlignment="textEnd"
-                                android:layout_marginTop="4dp"
-                                android:layout_marginBottom="4dp"
-                                android:textColor="#b3b3b3"
-                                />
-                        </LinearLayout>
 
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/calibri"
+                                android:text="Ksh. 1200"
+                                android:textAlignment="textEnd"
+                                android:textColor="#f5a622"
+                                android:textSize="24sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp"
+                                android:layout_marginTop="4dp"
+                                android:fontFamily="@font/calibri"
+                                android:text="15 Hours"
+                                android:textAlignment="textEnd"
+                                android:textColor="#b3b3b3" />
+                        </LinearLayout>
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
