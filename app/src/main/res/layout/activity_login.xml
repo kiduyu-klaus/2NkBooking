@@ -1,57 +1,118 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login_splash"
-    tools:context=".LoginActivity">
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    tools:context=".Login">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="52dp"
-        android:layout_above="@+id/snackbar_phone_email"
-        android:layout_margin="4dp"
-        android:gravity="center|bottom">
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
 
-        <com.skydoves.elasticviews.ElasticButton
-            android:id="@+id/login_phone"
-            android:layout_width="250dp"
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:drawableEnd="@drawable/ic_phone"
-            android:padding="9dp"
-            android:text="Login with Phone"
-            android:background="#DF74F3"
-            android:textColor="@android:color/white"
-            android:textSize="17sp"
-            app:button_cornerRadius="14dp"
-            app:button_duration="250"
-            app:button_scale="0.87" />
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/default_horizontal_margin"
+            android:padding="@dimen/default_horizontal_margin"
+            android:text="Sign In"
+            android:textColor="@color/colorIcons"
+            android:textSize="30sp" />
 
-        <com.skydoves.elasticviews.ElasticButton
-            android:id="@+id/login_google"
-            android:layout_width="250dp"
-            android:layout_marginTop="7dp"
-            android:background="#57A56A"
-            android:textColor="@android:color/white"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/mobile_wrapper"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/login_phone"
-            android:drawableEnd="@drawable/ic_email"
-            android:padding="9dp"
-            android:textSize="17sp"
-            android:text="Login with Email"
-            app:button_cornerRadius="14dp"
-            app:button_duration="250"
-            app:button_scale="0.87"/>
-    </RelativeLayout>
+            android:textColorHint="@color/colorIcons">
+
+            <EditText
+                android:id="@+id/mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_horizontal_margin"
+                android:hint="Mobile Number"
+                android:inputType="text"
+                android:lines="1"
+                android:padding="@dimen/default_horizontal_margin"
+                android:textColor="@color/colorIcons" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/colorIcons">
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_horizontal_margin"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:lines="1"
+                android:padding="@dimen/default_horizontal_margin"
+                android:textColor="@color/colorIcons"
+                android:textColorHint="@color/colorIcons" />
+        </com.google.android.material.textfield.TextInputLayout>
 
 
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:visibility="gone"
-        android:id="@+id/snackbar_phone_email"/>
-</RelativeLayout>
+        <com.dd.processbutton.iml.ActionProcessButton
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_horizontal_margin"
+            android:background="@color/colorPrimaryDark"
+            android:maxWidth="320dp"
+            android:padding="@dimen/default_horizontal_margin"
+            android:text="Login"
+            android:textAllCaps="false"
+            android:textColor="@color/colorIcons"
+            custom:pb_colorComplete="@color/green_complete"
+            custom:pb_colorError="@color/red_error"
+            custom:pb_colorNormal="@color/colorPrimaryDark"
+            custom:pb_colorPressed="@color/colorPrimaryDark"
+            custom:pb_colorProgress="@color/purple_progress"
+            custom:pb_textComplete="Success"
+            custom:pb_textError="Cannot Login"
+            custom:pb_textProgress="Logging In" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_horizontal_margin"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/forgot_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="50"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="Forgot Password?"
+                android:textColor="@color/colorIcons" />
+
+            <TextView
+                android:id="@+id/create_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="Create Account"
+                android:textColor="@color/colorIcons" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

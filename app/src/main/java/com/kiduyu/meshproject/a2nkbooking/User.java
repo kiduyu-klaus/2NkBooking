@@ -1,21 +1,62 @@
 package com.kiduyu.meshproject.a2nkbooking;
 
-public class User {
-    private String name, email, phone,image,password;
-    public User()
-    {
+import com.google.gson.Gson;
 
+/**
+ * Class which is used to represent the User of the Application
+ */
+public class User {
+    private int userId;
+    private double balance;
+    private String name;
+    private String mobile;
+    private String email;
+    private String address;
+    private String password;
+
+    public User() {
     }
 
-    public User(String name, String email, String phone, String image, String password) {
+
+
+    public User(int userId, double balance, String name, String mobile, String email, String address, String password) {
+        this.userId = userId;
         this.name = name;
-        this.email = email;
-        this.phone = phone;
-        this.image = image;
         this.password = password;
+        this.balance = balance;
+        this.mobile = mobile;
+        this.email = email;
+        this.address = address;
+    }
+
+    public static String getUserJson(User user) {
+        return new Gson().toJson(user);
+    }
+
+    public static User getUserObject(String json) {
+        return new Gson().fromJson(json, User.class);
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
     public String getName() {
+        if (this.name == null || this.name.equals("-")) {
+            return "-";
+        }
         return name;
     }
 
@@ -23,7 +64,21 @@ public class User {
         this.name = name;
     }
 
+    public String getMobile() {
+        if (this.mobile == null || this.mobile.equals("-")) {
+            return "-";
+        }
+        return mobile;
+    }
+
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
+    }
+
     public String getEmail() {
+        if (this.email == null || this.email.equals("-")) {
+            return "-";
+        }
         return email;
     }
 
@@ -31,27 +86,54 @@ public class User {
         this.email = email;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getAddress() {
+        if (this.address == null || this.address.equals("-")) {
+            return "-";
+        }
+        return address;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getPassword() {
+        if (this.password == null || this.password.equals("-")) {
+            return "-";
+        }
         return password;
     }
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof User)) return false;
+
+        User user = (User) o;
+
+        return userId == user.userId;
+
+    }
+
+    @Override
+    public int hashCode() {
+        return userId;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userId=" + userId +
+                ", balance=" + balance +
+                ", name='" + name + '\'' +
+                ", mobile='" + mobile + '\'' +
+                ", email='" + email + '\'' +
+                ", address='" + address + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
 }
