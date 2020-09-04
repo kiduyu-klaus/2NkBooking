@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="8dp"
-    tools:context=".MyAccount">
+    tools:context=".Fragments.MyAccount">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -39,30 +39,30 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/name"
+                    android:id="@+id/myaccount_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
                     android:padding="8dp"
-                    android:text="Name : Prathab"
+                    android:text="Name : "
                     android:textColor="@color/colorPrimary" />
 
                 <TextView
-                    android:id="@+id/balance"
+                    android:id="@+id/myaccount_balance"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
                     android:padding="8dp"
-                    android:text="Balance : ₹0.0"
+                    android:text="Balance : "
                     android:textColor="@color/colorPrimary" />
 
                 <TextView
-                    android:id="@+id/email"
+                    android:id="@+id/myaccount_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
                     android:padding="8dp"
-                    android:text="Email : jm.prathab@gmail.com"
+                    android:text="Email : "
                     android:textColor="@color/colorPrimary" />
 
                 <TextView

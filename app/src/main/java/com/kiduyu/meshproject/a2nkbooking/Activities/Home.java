@@ -1,4 +1,4 @@
-package com.kiduyu.meshproject.a2nkbooking;
+package com.kiduyu.meshproject.a2nkbooking.Activities;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
@@ -16,31 +16,33 @@ import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
+import com.kiduyu.meshproject.a2nkbooking.Fragments.EditAccount;
+import com.kiduyu.meshproject.a2nkbooking.Fragments.Help;
+import com.kiduyu.meshproject.a2nkbooking.Fragments.MyAccount;
+import com.kiduyu.meshproject.a2nkbooking.Fragments.Settings;
+import com.kiduyu.meshproject.a2nkbooking.Fragments.TravelHistory;
+import com.kiduyu.meshproject.a2nkbooking.R;
+import com.kiduyu.meshproject.a2nkbooking.Session.Prevalent;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
 
-import static com.kiduyu.meshproject.a2nkbooking.ApplicationHelper.readFromSharedPreferences;
-import static com.kiduyu.meshproject.a2nkbooking.ApplicationHelper.writeToSharedPreferences;
+public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, EditAccount.OnFragmentInteractionListener {
-    @BindView(R.id.app_bar)
     Toolbar toolbar;
-    @BindView(R.id.floating_action_button)
+
     FloatingActionButton floatingActionButton;
-    @BindView(R.id.drawer_layout)
+
     DrawerLayout drawerLayout;
-    @BindView(R.id.navigation_view)
+
     NavigationView navigationView;
     private FragmentManager fragmentManager;
     private boolean backPressed = false;
 
-    @OnClick(R.id.floating_action_button)
+
     public void floatingButtonPressed() {
         Fragment current = fragmentManager.findFragmentById(R.id.activity_root_layout_linear);
         if (current instanceof MyAccount) {
@@ -52,22 +54,29 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             floatingActionButton.setVisibility(View.INVISIBLE);
             navigationView.setCheckedItem(R.id.menu_edit_details);
         }
-        if (current instanceof Lister) {
-            Lister lister = (Lister) current;
-            lister.shareDataAsText();
-        }
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        ButterKnife.bind(this);
+        toolbar = findViewById(R.id.app_bar);
+        navigationView = findViewById(R.id.navigation_view);
+        drawerLayout = findViewById(R.id.drawer_layout);
+        floatingActionButton = findViewById(R.id.floating_action_button);
         setSupportActionBar(toolbar);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+        View headerView = navigationView.getHeaderView(0);
+
+        TextView user= headerView.findViewById(R.id.navigation_header_name);
+        TextView phone= headerView.findViewById(R.id.navigation_header_mobile_number);
+
+        user.setText(Prevalent.currentOnlineUser.getName());
+        phone.setText("+"+Prevalent.currentOnlineUser.getMobile());
+
         fragmentManager = getSupportFragmentManager();
         MyAccount myAccount = (MyAccount) getSupportFragmentManager().findFragmentByTag("MY_ACCOUNT");
         if (myAccount == null) {
@@ -154,7 +163,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             builder.setPositiveButton("Logout", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    writeToSharedPreferences(Constants.SUCCESSFUL_LOGIN_HISTORY, false);
+                   //add clear login details
                     startActivity(new Intent(Home.this, Login.class));
                     finish();
                 }
@@ -184,20 +193,13 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             floatingActionButton.setVisibility(View.INVISIBLE);
 
         } else if (id == R.id.bus_tracker) {
-            Lister lister = (Lister) fragmentManager.findFragmentByTag("BUS");
-            if (lister == null) {
-                lister = Lister.newInstance("BUS");
-            }
-            replaceFragment(lister, "BUS", "Bus Tracker");
+
+
             floatingActionButton.setVisibility(View.VISIBLE);
             floatingActionButton.setImageResource(R.drawable.icon_share);
 
         } else if (id == R.id.stop_details) {
-            Lister lister = (Lister) fragmentManager.findFragmentByTag("STOP");
-            if (lister == null) {
-                lister = Lister.newInstance("STOP");
-            }
-            replaceFragment(lister, "STOP", "Stop Details");
+
             floatingActionButton.setVisibility(View.VISIBLE);
             floatingActionButton.setImageResource(R.drawable.icon_share);
 
@@ -210,23 +212,14 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             floatingActionButton.setVisibility(View.INVISIBLE);
 
         } else if (id == R.id.about) {
-            About about = (About) fragmentManager.findFragmentByTag("ABOUT");
-            if (about == null) {
-                about = About.newInstance();
-            }
-            replaceFragment(about, "ABOUT", "About");
+
             floatingActionButton.setVisibility(View.INVISIBLE);
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
 
-    @Override
-    public void onFragmentInteraction() {
-        writeToSharedPreferences(Constants.SUCCESSFUL_LOGIN_HISTORY, false);
-        startActivity(new Intent(Home.this, Login.class));
-        finish();
-    }
+
 
     private void replaceFragment(Fragment fragment, String tag, String actionBarTitle) {
         fragmentManager.beginTransaction().replace(R.id.activity_root_layout_linear, fragment, tag).commit();

@@ -8,6 +8,13 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="colorButtonNormal">@color/colorPrimaryDark</item>
     </style>
+    <style name="AppThemeAction" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorButtonNormal">@color/colorPrimaryDark</item>
+    </style>
 
     <style name="AlertDialogDark" parent="Theme.AppCompat.Light.Dialog.Alert">
         <item name="colorAccent">@color/colorIcons</item>

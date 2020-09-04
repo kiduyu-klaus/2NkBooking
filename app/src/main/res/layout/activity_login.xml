@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:fillViewport="true"
     android:fitsSystemWindows="true"
-    tools:context=".Login">
+    tools:context=".Activities.Login">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,12 +33,13 @@
             android:textColorHint="@color/colorIcons">
 
             <EditText
-                android:id="@+id/mobile"
+                android:id="@+id/number_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/default_horizontal_margin"
                 android:hint="Mobile Number"
                 android:inputType="text"
+                android:text="254719629173"
                 android:lines="1"
                 android:padding="@dimen/default_horizontal_margin"
                 android:textColor="@color/colorIcons" />
@@ -48,14 +49,16 @@
             android:id="@+id/password_wrapper"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="@color/colorIcons">
+            android:textColorHint="@color/colorIcons"
+            custom:passwordToggleEnabled="true">
 
             <EditText
-                android:id="@+id/password"
+                android:id="@+id/password_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/default_horizontal_margin"
                 android:hint="Password"
+                android:text="1234"
                 android:inputType="textPassword"
                 android:lines="1"
                 android:padding="@dimen/default_horizontal_margin"
@@ -63,14 +66,31 @@
                 android:textColorHint="@color/colorIcons" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_horizontal_margin"
+
+            android:gravity="end"
+            android:padding="5dp">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remember me"
+                android:padding="4dp"
+                android:textSize="15sp"
+                android:id="@+id/remember_me_chkb"/>
+        </LinearLayout>
 
         <com.dd.processbutton.iml.ActionProcessButton
-            android:id="@+id/login"
+            android:id="@+id/login_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/default_horizontal_margin"
             android:background="@color/colorPrimaryDark"
             android:maxWidth="320dp"
+            android:onClick="LoginToapp"
             android:padding="@dimen/default_horizontal_margin"
             android:text="Login"
             android:textAllCaps="false"
@@ -99,6 +119,7 @@
                 android:layout_weight="50"
                 android:clickable="true"
                 android:gravity="center"
+                android:onClick="forgotPasssword"
                 android:text="Forgot Password?"
                 android:textColor="@color/colorIcons" />
 
@@ -109,6 +130,7 @@
                 android:layout_weight="50"
                 android:clickable="true"
                 android:gravity="center"
+                android:onClick="createAccount"
                 android:text="Create Account"
                 android:textColor="@color/colorIcons" />
         </LinearLayout>
