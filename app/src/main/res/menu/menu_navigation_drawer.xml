@@ -13,7 +13,7 @@
                     android:id="@+id/menu_edit_details"
                     android:checkable="true"
                     android:icon="@drawable/ic_menu_edit"
-                    android:title="Edit Account" />
+                    android:title="My Wallet" />
                 <item
                     android:id="@+id/menu_settings"
                     android:checkable="true"
@@ -30,6 +30,11 @@
         <item android:title="Details">
             <menu>
                 <item
+                    android:id="@+id/travel_book"
+                    android:checkable="true"
+                    android:icon="@drawable/ic_menu_details"
+                    android:title="Book A Ticket" />
+                <item
                     android:id="@+id/travel_history"
                     android:checkable="true"
                     android:icon="@drawable/ic_menu_details"
@@ -39,11 +44,6 @@
                     android:checkable="true"
                     android:icon="@drawable/ic_menu_bus"
                     android:title="Bus Tracker" />
-                <item
-                    android:id="@+id/stop_details"
-                    android:checkable="true"
-                    android:icon="@drawable/ic_menu_stop_details"
-                    android:title="Stop Details" />
             </menu>
         </item>
     </group>
@@ -51,6 +51,12 @@
     <group android:checkableBehavior="single">
         <item android:title="User Support">
             <menu>
+
+                <item
+                    android:id="@+id/stop_details"
+                    android:checkable="true"
+                    android:icon="@drawable/ic_menu_stop_details"
+                    android:title="cancel Tickets" />
                 <item
                     android:id="@+id/help"
                     android:checkable="true"

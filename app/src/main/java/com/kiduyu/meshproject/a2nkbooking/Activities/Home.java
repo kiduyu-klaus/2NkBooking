@@ -4,6 +4,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
@@ -47,9 +48,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         Fragment current = fragmentManager.findFragmentById(R.id.activity_root_layout_linear);
         if (current instanceof MyAccount) {
             EditAccount editAccount = (EditAccount) fragmentManager.findFragmentByTag("EDIT_ACCOUNT");
-            if (editAccount == null) {
-                editAccount = EditAccount.newInstance();
-            }
+
             replaceFragment(editAccount, "EDIT_ACCOUNT", "Edit Account");
             floatingActionButton.setVisibility(View.INVISIBLE);
             navigationView.setCheckedItem(R.id.menu_edit_details);
@@ -60,6 +59,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        getWindow().setNavigationBarColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));
         toolbar = findViewById(R.id.app_bar);
         navigationView = findViewById(R.id.navigation_view);
         drawerLayout = findViewById(R.id.drawer_layout);
@@ -76,6 +76,8 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
         user.setText(Prevalent.currentOnlineUser.getName());
         phone.setText("+"+Prevalent.currentOnlineUser.getMobile());
+
+
 
         fragmentManager = getSupportFragmentManager();
         MyAccount myAccount = (MyAccount) getSupportFragmentManager().findFragmentByTag("MY_ACCOUNT");
@@ -141,10 +143,8 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             floatingActionButton.setVisibility(View.VISIBLE);
             floatingActionButton.setImageResource(R.drawable.icon_edit);
         } else if (id == R.id.menu_edit_details) {
-            EditAccount editAccount = (EditAccount) fragmentManager.findFragmentByTag("EDIT_ACCOUNT");
-            if (editAccount == null) {
-                editAccount = EditAccount.newInstance();
-            }
+            EditAccount editAccount = (EditAccount) new EditAccount();
+
             replaceFragment(editAccount, "EDIT_ACCOUNT", "Edit Account");
             floatingActionButton.setVisibility(View.INVISIBLE);
         } else if (id == R.id.menu_settings) {
@@ -199,6 +199,11 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             floatingActionButton.setImageResource(R.drawable.icon_share);
 
         } else if (id == R.id.stop_details) {
+
+            floatingActionButton.setVisibility(View.VISIBLE);
+            floatingActionButton.setImageResource(R.drawable.icon_share);
+
+        } else if (id == R.id.travel_book) {
 
             floatingActionButton.setVisibility(View.VISIBLE);
             floatingActionButton.setImageResource(R.drawable.icon_share);

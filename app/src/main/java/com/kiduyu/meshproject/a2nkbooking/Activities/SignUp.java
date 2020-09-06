@@ -122,7 +122,7 @@ public class SignUp extends AppCompatActivity {
                 PhoneNumber.setError("Phone Number must start with 254..");
                 return;
             }else {
-                loadingBar.setTitle("Create Account");
+                loadingBar.setTitle("Creating Account");
                 loadingBar.setMessage("Please wait, while we are checking the credentials.");
                 loadingBar.setCanceledOnTouchOutside(false);
                 loadingBar.show();

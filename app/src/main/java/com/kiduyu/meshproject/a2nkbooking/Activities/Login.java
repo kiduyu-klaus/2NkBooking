@@ -97,7 +97,7 @@ public class Login extends AppCompatActivity {
             pass.setError("Password Is Required..");
             return;
         } else {
-            loadingBar.setTitle("Logging Into The VetFinder App");
+            loadingBar.setTitle("Logging Into The App");
             loadingBar.setMessage("Please wait, while we are checking the credentials...");
             loadingBar.setCanceledOnTouchOutside(false);
             loadingBar.show();
